@@ -12,3 +12,5 @@ spring:
       url: jdbc:mysql://127.0.0.1/mall_user?characterEncoding=utf-8&useSSL=false
   jpa:
      show-sql: true
+  zipkin:
+        base-url: http://localhost:9000
