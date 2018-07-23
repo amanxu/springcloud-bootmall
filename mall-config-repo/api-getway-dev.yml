@@ -9,6 +9,9 @@ spring:
       profile: dev
   zipkin:
       base-url: http://localhost:9000
+  sleuth:
+      sampler:
+        percentage: 1.0
 eureka:
   client:
     service-url:

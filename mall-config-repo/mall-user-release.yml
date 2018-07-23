@@ -14,3 +14,6 @@ spring:
      show-sql: true
   zipkin:
         base-url: http://localhost:9000
+  sleuth:
+      sampler:
+        percentage: 1.0
