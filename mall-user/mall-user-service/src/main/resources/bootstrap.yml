@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: mall-user
+      label: master
+      profile: dev
+      uri: http://localhost:8961
