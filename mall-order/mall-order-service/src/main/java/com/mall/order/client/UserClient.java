@@ -1,10 +1,9 @@
 package com.mall.order.client;
 
 import com.mall.common.pojo.Result;
-import com.mall.user.model.pojo.User;
+import com.mall.order.hystrix.UserClientHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date: 2018-07-22 22:59
  */
 @Component
-@FeignClient(name = "mall-user")
+@FeignClient(name = "mall-user", fallback = UserClientHystrix.class)
 public interface UserClient {
 
     /**
@@ -24,7 +23,7 @@ public interface UserClient {
      * @return
      */
     @RequestMapping("/user/queryId")
-    public User findById(@RequestParam("userId") Long userId);
+    public Result findById(@RequestParam("userId") Long userId);
 
     /**
      * 根据用户名查询

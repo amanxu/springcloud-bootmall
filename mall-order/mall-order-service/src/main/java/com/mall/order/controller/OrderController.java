@@ -9,7 +9,6 @@ import com.mall.order.enums.ResultEnum;
 import com.mall.order.exception.OrderException;
 import com.mall.order.form.OrderForm;
 import com.mall.order.service.OrderService;
-import com.mall.user.model.pojo.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;

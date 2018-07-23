@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
+
 @ComponentScan("com.mall.order")
 @MapperScan("com.mall.order.mapper")
 public class MallOrderServiceApplication {
