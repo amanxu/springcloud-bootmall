@@ -5,6 +5,11 @@ spring:
       label: master
       profile: dev
       uri: http://localhost:8961
+  zipkin:
+    base-url: http://localhost:9000
+  sleuth:
+    sampler:
+      probability: 1
 feign:
   hystrix:
     enable: true
